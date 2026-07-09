@@ -2,5 +2,4 @@
 nixPkgs = ['php82', 'php82Extensions.pdo', 'php82Extensions.pdo_mysql', 'php82Extensions.mbstring']
 
 [start]
-# Ubah bagian -t public agar server mencari file di dalam folder tersebut
-cmd = 'php -S 0.0.0.0:$PORT -t public'
+cmd = 'php -S 0.0.0.0:$PORT -t public public/index.php'
