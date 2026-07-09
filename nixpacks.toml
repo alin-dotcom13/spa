@@ -2,4 +2,5 @@
 nixPkgs = ['php82', 'php82Extensions.pdo', 'php82Extensions.pdo_mysql', 'php82Extensions.mbstring']
 
 [start]
+# Kita tambahkan flag -S (built-in server) dan memastikan server memproses file PHP
 cmd = 'php -S 0.0.0.0:$PORT -t public'
