@@ -1,9 +1,10 @@
 <?php
-$host = getenv('MYSQLHOST') ?: 'localhost';
-$user = getenv('MYSQLUSER') ?: 'root';
-$pass = getenv('MYSQLPASSWORD') ?: '';
-$db   = getenv('MYSQLDATABASE') ?: 'db_spa_kecantikan';
-$port = getenv('MYSQLPORT') ?: '3306';
+$host = getenv('MYSQLHOST');
+$user = getenv('MYSQLUSER');
+$pass = getenv('MYSQLPASSWORD');
+$db   = getenv('MYSQLDATABASE');
+$port = getenv('MYSQLPORT');
+
 
 $conn = mysqli_connect($host, $user, $pass, $db, $port);
 
