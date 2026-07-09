@@ -1,7 +1,6 @@
 FROM dunglas/frankenphp
-
 RUN install-php-extensions mysqli
-
-COPY . /app
-
-ENV FRANKENPHP_CONFIG="worker /app/index.php"
+# Menyalin semua file ke lokasi standar
+COPY . /var/www/html
+# Mengarahkan konfigurasi ke folder baru
+ENV FRANKENPHP_CONFIG="worker /var/www/html/index.php"
