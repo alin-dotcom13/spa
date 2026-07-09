@@ -1,4 +1,3 @@
-FROM dunglas/frankenphp
-RUN install-php-extensions mysqli
+FROM php:8.2-apache
+RUN docker-php-ext-install mysqli
 COPY . /var/www/html
-ENV FRANKENPHP_CONFIG="worker /var/www/html/test.php"
