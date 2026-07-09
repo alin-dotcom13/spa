@@ -1,0 +1,641 @@
+/* style.css */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fffafb;
+    /* Ini kunci agar semua halaman mulai dari posisi yang sama */
+    align-items: flex-start; 
+}
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #880e4f, #ec407a);
+    color: white;
+    padding: 25px 20px;
+    position: sticky;
+    top: 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    /* Memastikan konten tidak menabrak sidebar */
+    width: calc(100% - 250px);
+}
+/* Layout khusus untuk halaman yang butuh terpusat (Login/Registrasi) */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Mengambil sisa tinggi layar */
+    width: 100%;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* Ukuran yang pas agar tidak terlalu lebar */
+    border-top: 6px solid #ec407a;
+}
+.btn-plus {
+    background: #ec407a !important;
+    color: white !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 10px rgba(236, 64, 122, 0.3) !important;
+    transition: 0.3s !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-bottom: 20px !important;
+}
+
+.btn-plus:hover {
+    background: #880e4f !important;
+    transform: scale(1.1);
+}
+table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 20px !important;
+    background: white !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+}
+
+th {
+    background: #fce4ec !important; /* Warna pink lembut */
+    color: #880e4f !important;
+    padding: 15px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+}
+
+td {
+    padding: 15px !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+    color: #333 !important;
+}
+
+tr:hover {
+    background-color: #fff9fb !important; /* Efek hover saat mouse di atas baris */
+}
+/* Styling modern untuk input dan tombol agar senada */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Penting agar tidak melebar keluar */
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #ec407a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(236, 64, 122, 0.2);
+}
+
+button[type="submit"] {
+    background: #d81b60;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #880e4f;
+    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+}
+/* Styling Tabel Modern */
+.main-content {
+    background-color: #f9f9f9; /* Memberi kontras dengan kartu putih */
+    padding: 30px;
+}
+
+table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+    margin-top: 10px !important;
+}
+
+th {
+    background: #880e4f !important; /* Warna gelap sidebar untuk kontras */
+    color: white !important;
+    padding: 18px !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 16px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    font-size: 14px;
+}
+
+/* Efek baris selang-seling (Zebra Stripe) */
+tr:nth-child(even) {
+    background-color: #fafafa !important;
+}
+
+/* Badge level agar terlihat premium */
+.badge-silver { background: #e0e0e0; color: #424242; padding: 5px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; }
+.badge-gold { background: #fff8e1; color: #ff8f00; padding: 5px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; }
+.badge-platinum { background: #e3f2fd; color: #1976d2; padding: 5px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; }
+/* Buat tabel tidak menyentuh pinggiran kartu */
+table {
+    margin-top: 10px !important;
+    border-collapse: collapse !important;
+}
+
+/* Tambah jarak di dalam sel tabel */
+td, th {
+    padding: 20px !important; /* Tambahkan padding agar lebih lega */
+}
+.tr-menunggu { background-color: #fff9f6 !important; }
+/* Card Statistik Modern */
+.stat-card {
+    background: linear-gradient(135deg, #d81b60 0%, #ad1457 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.2);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover { transform: translateY(-5px); }
+
+/* Tabel Modern */
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+th { background: #f8f9fa; color: #555; padding: 15px; text-align: left; border-bottom: 2px solid #eee; }
+td { padding: 15px; border-bottom: 1px solid #eee; }
+
+/* Progress Bar Elegan */
+.progress-container { background: #eee; height: 10px; border-radius: 10px; width: 100%; overflow: hidden; }
+.progress-fill { background: linear-gradient(90deg, #d81b60, #ec407a); height: 100%; border-radius: 10px; }
+/* Styling untuk menu yang sedang aktif */
+.menu-active {
+    background-color: #ad1457 !important; /* Warna lebih gelap dari sidebar */
+    border-left: 5px solid #ffffff;       /* Garis putih di samping */
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Opsional: Tambahkan efek transisi agar perpindahan halus */
+.sidebar a {
+    transition: 0.3s;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}/* Warna Default Sidebar */
+.sidebar a { 
+    color: white; 
+    padding: 15px 20px; 
+    display: block; 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+
+/* Mengubah warna tombol menu jika halaman yang sesuai sedang dibuka */
+#page-jadwal .sidebar a[href="jadwal_terapis.php"],
+#page-laporan .sidebar a[href="laporan.php"],
+#page-dashboard .sidebar a[href="dashboard.php"] {
+    background-color: #ad1457; /* Warna lebih gelap untuk menandakan aktif */
+    border-left: 5px solid white; /* Garis putih di samping */
+    font-weight: bold;
+}
+/* Styling dasar link sidebar */
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Warna saat link aktif */
+.menu-active {
+    background-color: #ad1457 !important; /* Warna penanda aktif */
+    border-left: 5px solid #ffffff;       /* Garis putih di samping */
+    font-weight: bold;
+}
+
+/* Efek hover untuk link yang tidak aktif */
+.sidebar a:hover:not(.menu-active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Styling Tabel Modern */
+.jadwal-tabel {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Memberi jarak antar baris */
+}
+
+.jadwal-tabel tr {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+.jadwal-tabel td, .jadwal-tabel th {
+    padding: 15px 20px;
+}
+
+/* Badge Status agar terlihat profesional */
+.badge-free {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+/* Gaya Utama untuk Kontainer */
+.main { padding: 20px; }
+h2 { color: #880e4f; margin-bottom: 20px; }
+
+/* Styling Tabel Modern */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    color: #555;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+/* Styling Badge Status */
+.status-tersedia {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.status-sibuk {
+    background: #ffebee;
+    color: #c62828;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+/* Pastikan area utama menggunakan ruang yang tersedia */
+.main {
+    padding: 20px;
+    width: calc(100% - 250px); /* 250px adalah asumsi lebar sidebar Anda */
+    box-sizing: border-box;
+}
+
+/* Jika Anda membungkus tabel dalam class .card */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 95%; /* Membuatnya hampir memenuhi lebar layar */
+    margin: 0 auto; /* Menjaga posisi di tengah jika diinginkan */
+}/* Update di style.css */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    width: 95%; /* Mengikuti lebar layar */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Penting agar input tidak melebihi container */
+}
+/* Tampilan Stok Menipis */
+.stok-warning {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #ef9a9a;
+}
+
+/* Tampilan Stok Aman */
+.stok-aman {
+    color: #2e7d32;
+    font-weight: 600;
+}
+/* Efek saat baris produk disorot */
+table tr:hover {
+    background-color: #fce4ec;
+    transition: 0.2s;
+}
+/* Styling Tabel Produk */
+.table-produk {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0; /* Menghilangkan spasi default */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden; /* Agar sudut border-radius terlihat */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.table-produk th {
+    background: #ad1457; /* Sesuai warna sidebar */
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table-produk td {
+    padding: 18px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.table-produk tr:last-child td {
+    border-bottom: none;
+}
+
+.table-produk tr:hover {
+    background-color: #fdf6f9;
+}
+/* Atur lebar kolom agar lebih proporsional */
+.table-produk th:nth-child(1) { width: 45%; } /* Nama Produk */
+.table-produk th:nth-child(2) { width: 25%; } /* Harga */
+.table-produk th:nth-child(3) { width: 30%; } /* Stok */
+
+/* Agar angka harga dan stok lebih mudah dibaca, kita ratakan ke kanan (untuk angka) */
+.table-produk td:nth-child(2), 
+.table-produk td:nth-child(3) {
+    text-align: right;
+    padding-right: 20px;
+}
+/* Kontainer utama proses pembayaran */
+.pembayaran-card {
+    background: #ffffff;
+    padding: 40px; /* Ruang lebih lega */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Judul dan Garis */
+.pembayaran-card h3 {
+    text-align: center;
+    color: #ad1457;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+/* Detail Transaksi */
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+/* Kotak Total Tagihan */
+.total-tagihan {
+    background: #fff5f8;
+    border: 2px dashed #ad1457;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ad1457;
+}
+@media print {
+    /* Sembunyikan Sidebar, Menu Utama, tombol, dan form input */
+    .sidebar, 
+    nav, 
+    button, 
+    .btn-back, 
+    form label, 
+    select, 
+    input {
+        display: none !important;
+    }
+
+    /* Pastikan area utama mengambil seluruh lebar kertas */
+    .main, .pembayaran-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Pastikan latar belakang putih dan teks hitam untuk struk */
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+/* Pastikan tabel tidak berantakan */
+.tabel-antrean {
+    width: 100%;
+    table-layout: fixed; /* Memaksa kolom memiliki lebar yang stabil */
+    border-collapse: collapse;
+}
+
+/* Berikan ruang lebih untuk kolom Status dan Aksi */
+.tabel-antrean th:nth-child(6), 
+.tabel-antrean th:nth-child(7) {
+    width: 150px; /* Lebar tetap agar tombol tidak turun ke bawah */
+}
+
+/* Pastikan tombol tidak terpotong */
+.btn-aksi {
+    display: inline-block;
+    padding: 8px 12px;
+    white-space: nowrap; /* Mencegah teks tombol terpotong atau turun */
+}
+.laporan-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi dua kolom */
+    gap: 20px;
+}
+
+.card-laporan {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+/* Styling tombol menu */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Efek saat menu sedang aktif */
+.sidebar a.menu-active {
+    background: #880e4f; /* Warna lebih gelap untuk menunjukkan halaman aktif */
+    font-weight: bold;
+    border-left: 5px solid #ff4081; /* Garis samping sebagai penanda */
+}
+
+/* Efek saat mouse diarahkan (hover) */
+.sidebar a:hover {
+    background: #e91e63;
+}
+/* Gaya Judul Halaman yang Seragam */
+.page-title {
+    color: #ad1457;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-left: 6px solid #ad1457; /* Aksen garis kiri */
+    padding-left: 15px;
+}
+/* Tabel yang lebih tegas dan jelas */
+.tabel-produk {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+}
+
+.tabel-produk th {
+    background: #ad1457;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.tabel-produk td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+/* Efek hover agar baris data lebih mudah diikuti mata */
+.tabel-produk tr:hover {
+    background-color: #fdf6f9;
+}
+
+/* Badge Stok Menipis agar mencolok */
+.badge-stok-rendah {
+    background: #ffebee;
+    color: #c62828;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+/* Styling Tabel Modern dengan Aksen Pink */
+.tabel-custom {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden; /* Penting agar border-radius bekerja */
+    border-left: 5px solid #ad1457; /* Garis pink di sisi kiri tabel */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.tabel-custom th {
+    background: #ad1457;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.tabel-custom td {
+    padding: 15px;
+    border-bottom: 1px solid #fdf2f6; /* Warna pink sangat muda */
+}
+/* Styling Tabel yang rapi dan tidak menumpuk */
+.tabel-produk {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    table-layout: fixed; /* KUNCI: Memaksa tabel tidak meluap */
+}
+
+.tabel-produk th {
+    background: #ad1457;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.tabel-produk td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    word-wrap: break-word; /* Teks panjang akan otomatis turun ke bawah */
+}
+
+/* Mengatur proporsi lebar kolom */
+.tabel-produk th:nth-child(1), .tabel-produk td:nth-child(1) { width: 50%; } /* Nama Produk */
+.tabel-produk th:nth-child(2), .tabel-produk td:nth-child(2) { width: 25%; } /* Harga */
+.tabel-produk th:nth-child(3), .tabel-produk td:nth-child(3) { width: 25%; text-align: center; } /* Stok */
